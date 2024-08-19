@@ -4,8 +4,19 @@
 
 <% @blog_posts.each do |blog_post| %>
   <div>
+    <% if blog_post.draft? %>
+      <div class="p-2 rounded bg-gray-100 text-gray-900">
+        Draft
+      </div>
+    <% elsif blog_post.scheduled? %>
+      <div class="p-2 rounded bg-blue-300 text-gray-900">
+        Scheduled
+      </div>
+    <% end %>
+  </div>
+  <div>
     <%= blog_post.title %>
-    <%= blog_post.body %>
+    <%= blog_post.content %>
     <div>
       <%= link_to "Ver", blog_post  %>
     </div>
