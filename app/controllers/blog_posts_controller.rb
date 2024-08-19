@@ -54,6 +54,5 @@ class BlogPostsController < ApplicationController
 
   def authenticate_user!
     redirect_to root_path, notice: "mus login"
-    super
   end
 end
