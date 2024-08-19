@@ -50,9 +50,4 @@ class BlogPostsController < ApplicationController
   rescue ActiveRecord::RecordNotFound
     redirect_to root_path
   end
-
-
-  def authenticate_user!
-    redirect_to root_path, notice: "mus login"
-  end
 end
