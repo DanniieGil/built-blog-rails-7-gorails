@@ -1,0 +1,16 @@
+<h1>
+  <%= @blog_post.title %>
+</h1>
+
+<h3>
+  <%= @blog_post.body %>
+</h3>
+
+<h4>
+  <%= link_to "Editar", edit_blog_post_path %>
+</h4>
+
+<h4>
+
+  <%= button_to "Eliminar", @blog_post, method: :delete %>
+</h4>

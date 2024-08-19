@@ -1,0 +1,19 @@
+<%= form_for @blog_post do |form| %>
+  <% if form.object.errors.any? %>
+    <div>
+      <% form.object.errors.full_messages.each do |message| %>
+        <div>
+          <%= message %>
+        </div>
+      <% end %>
+    </div>
+    
+  <% end %>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+  
+  <%= form.label :body %>
+  <%= form.text_field :body %>
+
+  <%= form.submit %>
+<% end %>

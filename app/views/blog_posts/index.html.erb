@@ -1,0 +1,14 @@
+<h1>Hola</h1>
+
+<%= link_to "Crear nuevo", new_blog_post_path %>
+
+<% @blog_posts.each do |blog_post| %>
+  <div>
+    <%= blog_post.title %>
+    <%= blog_post.body %>
+    <div>
+      <%= link_to "Ver", blog_post  %>
+    </div>
+  </div>
+
+<% end %>
